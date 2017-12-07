@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginPage from './LoginPage';
+import PlacesPage from './PlacesPage';
 import NotFoundPage from './NotFoundPage';
-import Page from './Page';
 
 class App extends Component {
 	componentWillMount() {}
@@ -10,15 +10,11 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<div className="react-web">
-					<Page>
-						<Switch>
-							<Route exact path="/" component={LoginPage} />
-							<Route path="/bands" component={NotFoundPage} />
-							<Route component={NotFoundPage} />
-						</Switch>
-					</Page>
-				</div>
+				<Switch>
+					<Route exact path="/" component={LoginPage} />
+					<Route path="/places" component={PlacesPage} />
+					<Route component={NotFoundPage} />
+				</Switch>
 			</Router>
 		);
 	}

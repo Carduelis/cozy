@@ -28,12 +28,9 @@ input {
 	background: linear-gradient(-135deg, spin(@favoriteColor, 10%), spin(@favoriteColor, -8%));
 }
 
-.react-web {
-	min-height: 100vh;
-}
 .page {
-	min-height: 100vh;
 	display: flex;
+	padding-top: @headerHeight;
 	flex-wrap: wrap;
 	align-items: stretch;
 }
@@ -87,6 +84,34 @@ input {
 }
 .pac-icon {
 	margin-top: 5px;
+}
+#root {
+	perspective: 500px;
+}
+.accelerated {
+	transition: 300ms all;
+	will-change: transform;
+}
+.card {
+	background-color: #fff;
+	position: relative;
+	padding: 27% 0;
+	margin: @pad;
+	width: @pad*10;
+	border-radius: @pad/4;
+	box-shadow: 0 @pad/4 @pad/4 rgba(0, 0, 0, .2);
+	> * {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.place {
+	padding: @pad;
+	border-radius: inherit;
 }
 
 @import "mixins.less";

@@ -1,8 +1,11 @@
 export default {
-  data: {
+	data: {
 		bands: {}
 	},
 	ui: {
 		loggedIn: false
+	},
+	device: {
+		acceleration: []
 	}
-}
+};
