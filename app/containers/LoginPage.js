@@ -18,6 +18,14 @@ class LoginPage extends Component {
 				console.log(e);
 			}
 		};
+		const btnDendogramProps = {
+			label: 'Open Dendogram',
+			size: 'lg',
+			styles: ['white'],
+			handleClick: () => {
+				window.location.hash = 'dendogram';
+			}
+		};
 		console.log(this.props);
 		return (
 			<div className="login-page">
@@ -40,6 +48,11 @@ class LoginPage extends Component {
 						<span className="help-text">Type your name</span>
 					</div>
 					<Button {...btnProps}>
+						<span className="arrow">
+							<MdArrowForward />
+						</span>
+					</Button>
+					<Button {...btnDendogramProps}>
 						<span className="arrow">
 							<MdArrowForward />
 						</span>
