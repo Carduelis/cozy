@@ -1,2 +1,4 @@
 export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';
 export const ACCELERATION = 'ACCELERATION';
+export const ADD_SECTOR = 'ADD_SECTOR';
+export const ACTIVE_SECTOR = 'ACTIVE_SECTOR';

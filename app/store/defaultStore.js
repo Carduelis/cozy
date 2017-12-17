@@ -1,6 +1,7 @@
 export default {
 	data: {
-		bands: {}
+		bands: {},
+		navigation: {},
 	},
 	ui: {
 		loggedIn: false
